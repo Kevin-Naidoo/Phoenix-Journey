@@ -75,7 +75,7 @@
   
   * resources "/topics", TopicController
     
-  16) `mix phx.gen.schema Accounts.User users email:string:unique provider:string token:string`
+  16) `mix phx.gen.html Accounts User users email:string`
   
   * resources "/users", UserController
   
