@@ -12,6 +12,12 @@ defmodule DiscussWeb.AuthController do
     signin(conn, changeset)
   end
 
+  def signout(conn, _param) do
+    conn
+    |> configure_session(drop: true)
+    |> redirect(to: ~p"/topics")
+  end
+
   defp signin(conn, changeset) do
 
     case insert_or_update_user(changeset) do

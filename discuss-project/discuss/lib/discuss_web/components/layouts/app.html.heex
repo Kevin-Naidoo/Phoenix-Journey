@@ -24,6 +24,19 @@
     </div>
   </div>
 </header>
+<body class="hover:text-zinc-700">
+  <ul class="right">
+    <%= if @conn.assigns[:user] do %>
+    <li class="hover:text-zinc-700">
+      <.link navigate={~p"/auth/signout"}>"Sign Out"</.link>
+    </li>
+    <% else %>
+    <li>
+      <.link navigate={~p"/auth/github"}>"Sign in with Github"</.link>
+    </li>
+    <% end %>
+  </ul>
+</body>
 <main class="px-4 py-20 sm:px-6 lg:px-8">
   <div class="mx-auto max-w-2xl">
     <.flash_group flash={@flash} />
