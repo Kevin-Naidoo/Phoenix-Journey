@@ -13,7 +13,7 @@
 * set-up the desired password,
     *  make sure whatever password is used is remembered and the same as the password on the config folder under dev.exs file
     *  on the dev.exs file keep the user as 'postgres' otherwise auth might fail.
-  5) `\q` <br>
+5) `\q` <br>
 	* use this to quit postgres terminal and  restart postgres in the event it was started before
 	
   6) sudo systemctl restart postgresql service <br>
