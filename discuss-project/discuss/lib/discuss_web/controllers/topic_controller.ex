@@ -18,7 +18,14 @@ defmodule DiscussWeb.TopicController do
   end
 
   def create(conn, %{"topic" => topic_params}) do
-    case Discussions.create_topic(topic_params) do
+
+    changeset = conn.assigns.user
+    |> Ecto.build_assoc(:topics)
+    |> Topic.changeset(topic_params)
+
+
+
+    case Discuss.Repo.insert(changeset) do
       {:ok, topic} ->
         conn
         |> put_flash(:info, "Topic created successfully.")
