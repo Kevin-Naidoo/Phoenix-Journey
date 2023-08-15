@@ -19,7 +19,7 @@ config :users_api, UsersApiWeb.Endpoint,
     layout: false
   ],
   pubsub_server: UsersApi.PubSub,
-  live_view: [signing_salt: "mvZzG4z+"]
+  live_view: [signing_salt: "8pB+EGHs"]
 
 # Configures the mailer
 #

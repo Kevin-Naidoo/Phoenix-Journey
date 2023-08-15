@@ -7,7 +7,7 @@ defmodule UsersApiWeb.Endpoint do
   @session_options [
     store: :cookie,
     key: "_users_api_key",
-    signing_salt: "rgaULV8Y",
+    signing_salt: "GaIKgnn8",
     same_site: "Lax"
   ]
 
